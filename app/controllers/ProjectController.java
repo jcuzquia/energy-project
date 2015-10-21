@@ -4,11 +4,14 @@ import models.User;
 import play.data.Form;
 import play.mvc.Controller;
 import play.mvc.Result;
+import views.html.common.head_section;
+import views.html.common.main;
+import views.html.*;
 
 public class ProjectController extends Controller{
 
 	public Result home(){
-		return ok(views.html.home.render("Hello"));
+		return ok(main.render(home.render(),head_section.render("YEAHH!")));
 	}
 	
 	public Result register(){

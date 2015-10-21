@@ -1,14 +1,13 @@
-@(title: String)(content: Html)
-@import views.html.common._
+@(content: Html)(head: Html)
 <!DOCTYPE html>
 
 <html lang="en">
 	<head>
-	    @head_section
+	    @head
 	</head>
 
     <body>
-        @content
+    	@content
     </body>
     
 	<script src="@routes.Assets.versioned("javascripts/jquery.min.js")" type="text/javascript"></script>
